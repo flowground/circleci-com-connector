@@ -1,0 +1,412 @@
+{
+    "title": "CircleCI",
+    "description": "The CircleCI API is a RESTful, fully-featured API that allows you to do almost anything in CircleCI.\nYou can access all information and trigger all actions.\nThe only thing we don't provide access to is billing functions, which must be done from the CircleCI web UI.\n",
+    "docsUrl": "",
+    "url": "https://api.apis.guru/v2/specs/circleci.com/v1/swagger.json",
+    "envVars": {},
+    "credentials": {
+        "fields": {
+            "server": {
+                "label": "Server",
+                "viewClass": "SelectView",
+                "model": [
+                    "https://circleci.com/api/v1",
+                    "--- Custom URL"
+                ],
+                "required": true
+            },
+            "otherServer": {
+                "label": "Custom Server URL",
+                "viewClass": "TextFieldView"
+            },
+            "apikey": {
+                "label": "circle-token (apikey)",
+                "viewClass": "TextFieldView"
+            }
+        }
+    },
+    "triggers": {
+        "startFlow": {
+            "main": "./lib/triggers/startFlow.js",
+            "type": "polling",
+            "title": "Start Flow",
+            "fields": {}
+        }
+    },
+    "actions": {
+        "get_me": {
+            "main": "./lib/actions/get_me.js",
+            "title": "Provides information about the signed in user.\n",
+            "description": "Provides information about the signed in user.\n",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_me.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_project__username___project_": {
+            "main": "./lib/actions/get_project__username___project_.js",
+            "title": "Build summary for each of the last 30 builds for a single git repo.\n",
+            "description": "Build summary for each of the last 30 builds for a single git repo.\n",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_project__username___project_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "post_project__username___project_": {
+            "main": "./lib/actions/post_project__username___project_.js",
+            "title": "Triggers a new build, returns a summary of the build.\n",
+            "description": "Triggers a new build, returns a summary of the build.\n",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/post_project__username___project_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "delete_project__username___project__build_cache": {
+            "main": "./lib/actions/delete_project__username___project__build_cache.js",
+            "title": "Clears the cache for a project.\n",
+            "description": "Clears the cache for a project.\n",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/delete_project__username___project__build_cache.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_project__username___project__checkout_key": {
+            "main": "./lib/actions/get_project__username___project__checkout_key.js",
+            "title": "Lists checkout keys.\n",
+            "description": "Lists checkout keys.\n",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_project__username___project__checkout_key.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "post_project__username___project__checkout_key": {
+            "main": "./lib/actions/post_project__username___project__checkout_key.js",
+            "title": "Creates a new checkout key.\nOnly usable with a user API token.\n",
+            "description": "Creates a new checkout key.\nOnly usable with a user API token.\n",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/post_project__username___project__checkout_key.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "delete_project__username___project__checkout_key__fingerprint_": {
+            "main": "./lib/actions/delete_project__username___project__checkout_key__fingerprint_.js",
+            "title": "Delete a checkout key.\n",
+            "description": "Delete a checkout key.\n",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/delete_project__username___project__checkout_key__fingerprint_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_project__username___project__checkout_key__fingerprint_": {
+            "main": "./lib/actions/get_project__username___project__checkout_key__fingerprint_.js",
+            "title": "Get a checkout key.\n",
+            "description": "Get a checkout key.\n",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_project__username___project__checkout_key__fingerprint_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_project__username___project__envvar": {
+            "main": "./lib/actions/get_project__username___project__envvar.js",
+            "title": "Lists the environment variables for :project\n",
+            "description": "Lists the environment variables for :project\n",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_project__username___project__envvar.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "post_project__username___project__envvar": {
+            "main": "./lib/actions/post_project__username___project__envvar.js",
+            "title": "Creates a new environment variable\n",
+            "description": "Creates a new environment variable\n",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/post_project__username___project__envvar.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "delete_project__username___project__envvar__name_": {
+            "main": "./lib/actions/delete_project__username___project__envvar__name_.js",
+            "title": "Deletes the environment variable named ':name'\n",
+            "description": "Deletes the environment variable named ':name'\n",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/delete_project__username___project__envvar__name_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_project__username___project__envvar__name_": {
+            "main": "./lib/actions/get_project__username___project__envvar__name_.js",
+            "title": "Gets the hidden value of environment variable :name\n",
+            "description": "Gets the hidden value of environment variable :name\n",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_project__username___project__envvar__name_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "post_project__username___project__ssh_key": {
+            "main": "./lib/actions/post_project__username___project__ssh_key.js",
+            "title": "Create an ssh key used to access external systems that require SSH key-based authentication\n",
+            "description": "Create an ssh key used to access external systems that require SSH key-based authentication\n",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/post_project__username___project__ssh_key.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "post_project__username___project__tree__branch_": {
+            "main": "./lib/actions/post_project__username___project__tree__branch_.js",
+            "title": "Triggers a new build, returns a summary of the build.\nOptional build parameters can be set using an experimental API.\n\nNote: For more about build parameters, read about [using parameterized builds](https://circleci.com/docs/parameterized-builds/)\n",
+            "description": "Triggers a new build, returns a summary of the build.\nOptional build parameters can be set using an experimental API.\n\nNote: For more about build parameters, read about [using parameterized builds](https://circleci.com/docs/parameterized-builds/)\n",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/post_project__username___project__tree__branch_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_project__username___project___build_num_": {
+            "main": "./lib/actions/get_project__username___project___build_num_.js",
+            "title": "Full details for a single build. The response includes all of the fields from the build summary.\nThis is also the payload for the [notification webhooks](/docs/configuration/#notify), in which case this object is the value to a key named 'payload'.\n",
+            "description": "Full details for a single build. The response includes all of the fields from the build summary.\nThis is also the payload for the [notification webhooks](/docs/configuration/#notify), in which case this object is the value to a key named 'payload'.\n",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_project__username___project___build_num_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_project__username___project___build_num__artifacts": {
+            "main": "./lib/actions/get_project__username___project___build_num__artifacts.js",
+            "title": "List the artifacts produced by a given build.\n",
+            "description": "List the artifacts produced by a given build.\n",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_project__username___project___build_num__artifacts.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "post_project__username___project___build_num__cancel": {
+            "main": "./lib/actions/post_project__username___project___build_num__cancel.js",
+            "title": "Cancels the build, returns a summary of the build.\n",
+            "description": "Cancels the build, returns a summary of the build.\n",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/post_project__username___project___build_num__cancel.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "post_project__username___project___build_num__retry": {
+            "main": "./lib/actions/post_project__username___project___build_num__retry.js",
+            "title": "Retries the build, returns a summary of the new build.\n",
+            "description": "Retries the build, returns a summary of the new build.\n",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/post_project__username___project___build_num__retry.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_project__username___project___build_num__tests": {
+            "main": "./lib/actions/get_project__username___project___build_num__tests.js",
+            "title": "Provides test metadata for a build\nNote: [Learn how to set up your builds to collect test metadata](https://circleci.com/docs/test-metadata/)\n",
+            "description": "Provides test metadata for a build\nNote: [Learn how to set up your builds to collect test metadata](https://circleci.com/docs/test-metadata/)\n",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_project__username___project___build_num__tests.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_projects": {
+            "main": "./lib/actions/get_projects.js",
+            "title": "List of all the projects you're following on CircleCI, with build information organized by branch.\n",
+            "description": "List of all the projects you're following on CircleCI, with build information organized by branch.\n",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_projects.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_recent_builds": {
+            "main": "./lib/actions/get_recent_builds.js",
+            "title": "Build summary for each of the last 30 recent builds, ordered by build_num.\n",
+            "description": "Build summary for each of the last 30 recent builds, ordered by build_num.\n",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_recent_builds.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "post_user_heroku_key": {
+            "main": "./lib/actions/post_user_heroku_key.js",
+            "title": "Adds your Heroku API key to CircleCI, takes apikey as form param name.\n",
+            "description": "Adds your Heroku API key to CircleCI, takes apikey as form param name.\n",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/post_user_heroku_key.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        }
+    }
+}

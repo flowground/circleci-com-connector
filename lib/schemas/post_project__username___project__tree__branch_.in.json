@@ -1,0 +1,34 @@
+{
+    "type": "object",
+    "properties": {
+        "username": {
+            "required": true,
+            "type": "string"
+        },
+        "project": {
+            "required": true,
+            "type": "string"
+        },
+        "branch": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "properties": {
+                "build_parameters": {
+                    "description": "Additional environment variables to inject into the build environment. A map of names to values.\n",
+                    "type": "object"
+                },
+                "parallel": {
+                    "description": "The number of containers to use to run the build. Default is null and the project default is used.\n",
+                    "type": "string"
+                },
+                "revision": {
+                    "description": "The specific revision to build.\nDefault is null and the head of the branch is used. Cannot be used with tag parameter.\n",
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        }
+    }
+}

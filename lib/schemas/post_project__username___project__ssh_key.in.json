@@ -1,0 +1,27 @@
+{
+    "type": "object",
+    "properties": {
+        "project": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "properties": {
+                "hostname": {
+                    "type": "string"
+                },
+                "private_key": {
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "Content_Type": {
+            "required": true,
+            "type": "string",
+            "enum": [
+                "application/json"
+            ]
+        }
+    }
+}

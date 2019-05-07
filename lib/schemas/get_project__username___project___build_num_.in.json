@@ -1,0 +1,17 @@
+{
+    "type": "object",
+    "properties": {
+        "username": {
+            "required": true,
+            "type": "string"
+        },
+        "project": {
+            "required": true,
+            "type": "string"
+        },
+        "build_num": {
+            "required": true,
+            "type": "integer"
+        }
+    }
+}

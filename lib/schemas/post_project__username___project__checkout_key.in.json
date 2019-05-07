@@ -1,0 +1,20 @@
+{
+    "type": "object",
+    "properties": {
+        "username": {
+            "required": true,
+            "type": "string"
+        },
+        "project": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "enum": [
+                "deploy-key",
+                "github-user-key"
+            ],
+            "type": "string"
+        }
+    }
+}

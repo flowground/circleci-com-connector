@@ -1,0 +1,23 @@
+{
+    "type": "object",
+    "properties": {
+        "limit": {
+            "type": "integer",
+            "maximum": 100,
+            "default": 30
+        },
+        "offset": {
+            "type": "integer",
+            "default": 0
+        },
+        "filter": {
+            "type": "string",
+            "enum": [
+                "completed",
+                "successful",
+                "failed",
+                "running"
+            ]
+        }
+    }
+}
